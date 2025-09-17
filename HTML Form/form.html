@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Form 📰</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Registration Form</h2>
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <!-- Email input -->
+       <label for="email">Email</label>
+       <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
+       <!-- Password -->
+        <label for="Password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" required>
+
+       <!-- Dropdown -->
+        <label for="country">Country</label>
+        <select name="country" id="country">
+         <option value="">Select</option>
+          <option value="india">India</option>
+          <option value="usa">USA</option>
+          <option value="uk">UK</option>
+        </select>
+
+        <!-- Radio buttons -->
+        <label>Gender</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="male">Male</label>
+          <label><input type="radio" name="gender" value="female">Female</label>
+          <label><input type="radio" name="gender" value="other">Other</label>
+        </div>
+
+       <!-- Checkboxes -->
+
+       <label>Skills</label>
+       <div class="checkbox-group">
+        <label><input type="checkbox" name="skills" value="html">HTML</label>
+        <label><input type="checkbox" name="skills" value="css">CSS</label>
+        <label><input type="checkbox" name="skills" value="js">JS</label>
+       </div>
+      
+      <!-- Textare -->
+
+      <label for="message">Message</label>
+      <textarea name="message" id="message" rows="3" placeholder="Write someting..."></textarea>
+
+      <!-- Submit button -->
+
+      <button type="submit" class="btn-submit">Submit</button>
+    </form>
+  </div>
+  
+</body>
+</html>
