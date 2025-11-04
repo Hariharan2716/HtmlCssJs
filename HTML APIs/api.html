@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Working with HTML API</title>
+</head>
+<body>
+  <h5>Display Location using Latitude and Longitude</h5>
+  
+  <button class="geeks" onclick="getlocation()">
+    Click Me
+  </button>
+
+  <br>
+  <p id="demo1"></p>
+
+  <script>
+    let variable1 = document.getElementById("demo1");
+    function getlocation(){
+      navigator.geolocation.getCurrentPosition(showLoc);
+    }
+    function showLoc(pos){
+      variable1.innerHTML = "Latitude: " + pos.coords.latitude +
+      "<br> Longitude: " + pos.coords.longitude;
+    }
+  </script>
+</body>
+</html>
