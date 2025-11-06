@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geo Location</title>
+  <style>
+    .g{
+      font-size: 40px;
+      font-weight: bold;
+      color: #009900;
+      margin-left: 20px;
+    }
+    .e{
+      margin-left: 150px;
+    }
+    p{
+      font-size: 20px;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="g">Geolocation</div>
+  <p>Working with geolocation</p>
+  <button class="e" onclick="getloaction()">
+    Click
+  </button>
+
+  <p id="demo1"></p>
+  
+  <script>
+    var var1 = document.getElementById("demo1")
+    function getlocation(){
+      navigator.getloaction.getCurrentPosition(showLoc, err);
+    }
+    function showLoc(pos){
+      var1.innerHTML = "Latitude: " + 
+      pos.coords.latitude + 
+      "<br> Longitude: " +
+      pos.coords.longitude;
+    }
+
+    function err(er){
+      switch(er.code){
+        case er.PERMISSION_DENIED:
+          var1.innerHTML="The application doesn't have the" + 
+          "Permission to make use of location services";
+          break;
+        case er.POSITION_UNAVAILABLE:
+          var1.innerHTML="The location of the device is uncertain";
+          break;
+        case er.TIMEOUT: 
+          var1.innerHTML="The request to get user location timed out";
+          break;
+        case er.UNKNOWN_ERROR:
+          var1.innerHTML="Time to fetch location information exceeded" + "the maximum timeout interval";
+          break;
+      }
+    }
+  </script>
+</body>
+</html>
