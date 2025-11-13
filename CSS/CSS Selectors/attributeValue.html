@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS [attribute *= value] Selector</title>
+
+    <style>
+        p[class*="for"] {
+            background: green;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+
+  <!-- In the followin example, the <p> element with a class attribute that contains the substring "for" will be styled with a green background and wheat text. -->
+  <h1>CSS [attribute *= "value"] Selector</h1>
+  <h2>CSS property</h2>
+
+  <p class="namefor">JumpsforGumps</p>
+  <p class="idfor">Jump ID for a Lup</p>
+</body>
+</html>
+  <!-- The [attribute *= "value"] selector targets the elements whose
+   attribute values contain a specified substring. This substring can appear anywhere within the attribute's value - beginning, end, or middle.-->
